@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj": {}
+    "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj": {
+    "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj",
+        "projectUniqueName": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj",
         "projectName": "CDJ-API",
-        "projectPath": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj",
-        "packagesPath": "C:\\Users\\paulo.henrique\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\obj\\",
+        "projectPath": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj",
+        "packagesPath": "/home/winpenning/.nuget/packages/",
+        "outputPath": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\paulo.henrique\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/winpenning/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -77,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
