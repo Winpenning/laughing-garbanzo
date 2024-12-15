@@ -22,6 +22,23 @@ public class CustumerController : ControllerBase{
             new ResultViewModel<CustumerDTO>("Error CC0x202: Internal Server Error."));
         }
     }
+
+    [HttpGet][Route("list/{id:int}")]
+    public async Task<IActionResult> GetByIdAsync
+    ([FromServices] AppDataContext context, [FromRoute] int id)
+    {
+        try{
+            var custumer = 
+                await context.Custumers.FirstOrDefaultAsync(x=>x.Id == id);
+            
+            if(custumer == null)
+                return StatusCode(404, new ResultViewModel<Custumer>("Error CC0x401: Custumer Not Found."));
+
+            return StatusCode(200, new ResultViewModel<Custumer>(custumer));
+        }catch(Exception){
+                return StatusCode(500, new ResultViewModel<Custumer>("Error CC0x402: Internal Server Error."));
+        }
+    }
     
     [HttpPost][Route("new")]
     public async Task<IActionResult> PostCustumer
