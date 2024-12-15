@@ -47,4 +47,35 @@ public class CustumerController : ControllerBase{
             new ResultViewModel<CustumerDTO>("Error CC0x102: Internal Server Error."));
         }
     }
+
+    [HttpPut][Route("{id:int}")]
+    public async Task<IActionResult> PutAsync
+    ([FromServices] AppDataContext context, [FromRoute] int id, [FromBody] CustumerDTO model)
+    {
+        try{
+            var custumer = 
+                await context.Custumers.FirstOrDefaultAsync(x=>x.Id == id);
+            
+            if(custumer == null)
+                return StatusCode(404, new ResultViewModel<Custumer>("Error CC0x301: Custumer Not Found."));
+            
+            custumer.FirstName = model.FirstName;
+            custumer.LastName = model.LastName;
+            custumer.PhoneNumber = model.PhoneNumber;
+            custumer.BirthdayDate = model.BirthdayDate;
+
+            context.Custumers.Update(custumer);
+            await context.SaveChangesAsync();            
+
+            return StatusCode(200, 
+            new ResultViewModel<Custumer>(custumer));
+        }
+        catch(ArgumentException){
+            return StatusCode(400, 
+            new ResultViewModel<CustumerDTO>("Error CC0x303: Bad Request."));
+        }catch(Exception){
+            return StatusCode(500, 
+            new ResultViewModel<Custumer>("Error CC0x302: Internal Server Error."));
+        }
+    }
 }
