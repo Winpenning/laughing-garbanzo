@@ -1,10 +1,10 @@
 namespace CDJ_API.Models;
 public class Custumer{
-    internal int Id { get; set; }
-    internal string FirstName  { get; set; } = string.Empty;
-    internal string LastName { get; set; } = string.Empty;
-    internal string PhoneNumber {get; set;} =string.Empty;
-    internal DateOnly BirthdayDate {get; set;}
+    public int Id { get; private set; }
+    public string FirstName  { get; private set; } = string.Empty;
+    public string LastName { get; private set; } = string.Empty;
+    public string PhoneNumber {get; private set;} =string.Empty;
+    public DateOnly BirthdayDate {get; private set;}
     public Custumer(){}
     public Custumer(string firstName, string lastName, string phoneNumber, DateOnly birthdayDate){
         FirstName = firstName;
