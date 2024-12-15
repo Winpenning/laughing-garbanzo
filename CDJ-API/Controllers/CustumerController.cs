@@ -2,11 +2,26 @@ using CDJ_API.Data;
 using CDJ_API.Models;
 using CDJ_API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CDJ_API.Controllers;
 
 [ApiController][Route("custumer")]
 public class CustumerController : ControllerBase{
+
+    [HttpGet][Route("list")]
+    public async Task<IActionResult> GetCustumer
+    ([FromServices] AppDataContext context)
+    {
+        try{
+            var custumers = 
+                await context.Custumers.OrderBy(x=>x.FirstName).ToListAsync();
+            return StatusCode(200, new ResultViewModel<List<Custumer>>(custumers));
+        }catch(Exception){
+            return StatusCode(500, 
+            new ResultViewModel<CustumerDTO>("Error CC0x202: Internal Server Error."));
+        }
+    }
     
     [HttpPost][Route("new")]
     public async Task<IActionResult> PostCustumer
