@@ -65,7 +65,7 @@ public class CustumerController : ControllerBase{
         }
     }
 
-    [HttpPut][Route("{id:int}")]
+    [HttpPut][Route("edit/{id:int}")]
     public async Task<IActionResult> PutAsync
     ([FromServices] AppDataContext context, [FromRoute] int id, [FromBody] CustumerDTO model)
     {
