@@ -4845,19 +4845,19 @@
     ]
   },
   "packageFolders": {
-    "/home/winpenning/.nuget/packages/": {}
+    "C:\\Users\\paulo.henrique\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj",
+      "projectUniqueName": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj",
       "projectName": "CDJ-API",
-      "projectPath": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/CDJ-API.csproj",
-      "packagesPath": "/home/winpenning/.nuget/packages/",
-      "outputPath": "/home/winpenning/dev/laughing-garbanzo/CDJ-API/obj/",
+      "projectPath": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\CDJ-API.csproj",
+      "packagesPath": "C:\\Users\\paulo.henrique\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paulo.henrique\\Desktop\\dev\\laughing-garbanzo\\CDJ-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/winpenning/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\paulo.henrique\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4875,6 +4875,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4919,7 +4924,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.111/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
